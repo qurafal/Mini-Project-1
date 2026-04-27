@@ -19,7 +19,7 @@ Alasan pemilihan teknik:
 2. Gaussian Filter dipakai untuk menghaluskan noise sisa secara lebih natural sebelum proses penajaman.
 3. Unsharp Mask meningkatkan ketajaman detail lokal dengan menambahkan high-frequency component (mask) ke citra.
 4. Laplacian Sharpening menonjolkan tepi dan struktur halus agar citra terlihat lebih jelas.
-5. Histogram Matching menyesuaikan distribusi intensitas citra hasil ke citra target, sehingga kontras dan tonal range lebih mendekati referensi.
+5. Histogram Matching menyesuaikan distribusi intensitas citra hasil ke citra target, sehingga kontras dan tonal range lebih mendekati referensi. Dipakai diakhir karena unsharp mask memberikan halo pada citra.
 
 ## Perbandingan Visual (Sebelum vs Sesudah)
 
@@ -39,6 +39,9 @@ Yang bisa ditingkatkan:
 1. Parameter kernel/sigma/amount masih statis, sehingga belum optimal untuk semua jenis noise.
 2. Potensi over-sharpening pada area tertentu masih bisa muncul; perlu tuning adaptif.
 3. Histogram matching saat ini dilakukan langsung pada array warna secara sederhana; kualitas warna bisa ditingkatkan dengan matching per channel yang lebih terkontrol atau pada ruang warna lain.
+
+## Notes
+>Citra masih jauh dari citra referensi dikarenakan noise yang terlalu banyak sehingga untuk menghilangkan keseluruhan noise akan menyebabkan gambar terlalu blur dan sulit untuk di sharpen. Saya telah mencoba pipeline serupa di Photoshop dan mendapat hasil yang serupa. 
 
 ## Cara Menjalankan Program
 1. Pastikan Python 3 sudah terpasang.
