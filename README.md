@@ -24,10 +24,10 @@ Alasan pemilihan teknik:
 ## Perbandingan Visual (Sebelum vs Sesudah)
 
 ### Sebelum (Noisy Input)
-![Sebelum - Noisy](test_image_lena_noisy.png)
+![Sebelum - Noisy](Input/test_image_lena_noisy.png)
 
 ### Sesudah (Hasil Restorasi)
-![Sesudah - Restorasi](hasil_proses.png)
+![Sesudah - Restorasi](Output/hasil_proses.png)
 
 ## Analisis Singkat
 Yang berhasil:
