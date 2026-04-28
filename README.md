@@ -19,7 +19,7 @@ Alasan pemilihan teknik:
 2. Gaussian Filter dipakai untuk menghaluskan noise sisa secara lebih natural sebelum proses penajaman.
 3. Unsharp Mask meningkatkan ketajaman detail lokal dengan menambahkan high-frequency component (mask) ke citra.
 4. Laplacian Sharpening menonjolkan tepi dan struktur halus agar citra terlihat lebih jelas.
-5. Histogram Matching menyesuaikan distribusi intensitas citra hasil ke citra target, sehingga kontras dan tonal range lebih mendekati referensi. Dipakai diakhir karena unsharp mask memberikan halo pada citra.
+5. Histogram Matching dilakukan dengan membuat LUT dari citra target kemudian menerapkannya ke citra, sehingga kontras dan tonal range lebih mendekati referensi. Dipakai diakhir karena unsharp mask memberikan halo pada citra.
 
 ## Perbandingan Visual (Sebelum vs Sesudah)
 
