@@ -60,7 +60,7 @@ pip install opencv-python numpy matplotlib
 4. Jalankan program:
 
 ```powershell
-python main.py
+python restoration.py
 ```
 
 5. Output hasil restorasi akan tersimpan sebagai:
