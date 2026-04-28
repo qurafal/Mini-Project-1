@@ -104,8 +104,8 @@ def unsharp_mask(image, sigma=0.5, kernel_size=3, amount=1.0):
 
 
 
-before = cv2.imread("test_image_lena_noisy.png")
-target = cv2.imread("test_image_lena_ori.png")
+before = cv2.imread("Input/test_image_lena_noisy.png")
+target = cv2.imread("Input/test_image_lena_ori.png")
 matched = median_filter(before, 7)
 matched = gauss_filter(matched, 7, 3)
 matched = unsharp_mask(matched)
@@ -118,7 +118,7 @@ cv2.imshow("target",target)
 cv2.imshow("matched",matched)
 
 
-output_path = "hasil_proses.png"
+output_path = "Output/hasil_proses.png"
 saved = cv2.imwrite(output_path, matched)
 
 cv2.waitKey(0)
